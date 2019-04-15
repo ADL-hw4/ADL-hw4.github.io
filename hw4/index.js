@@ -7,14 +7,13 @@ const HOSTED_URLS = {
 };
 
 const examples = {
-  'example1':
-      'Alice was beginning to get very tired of sitting by her sister on the bank.',
+  'example1': 'Mr. Bennet made no answer.',
   'example2':
-      'Buda-Pesth seems a wonderful place.',
+      'Alice was beginning to get very tired of sitting by her sister on the bank.',
   'example3':
-      'Scepticism was as much the result of knowledge, as knowledge is of scepticism.',  
-   'example4':
-     'Crap Bag'
+      'Buda-Pesth seems a wonderful place.',
+  'example4':
+      'Time passed on again, and the youngest son too wished to set out into the wide world to seek for the golden bird; but his father would not listen to it for a long while, for he was very fond of his son, and was afraid that some ill luck might happen to him also, and prevent his coming back.' 
 };
 
 function status(statusText) {

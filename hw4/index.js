@@ -47,8 +47,9 @@ function doPredict(predict) {
   const textField = document.getElementById('text-entry');
   const result = predict(textField.value);
   score_string = "Class scores: ";
+  var a = ["Pride and Prejudice","Alice's adventures in wonderland","Dracula","Grimm's Tales"]
   for (var x in result.score) {
-    score_string += x + " ->  " + result.score[x].toFixed(3) + ", "
+    score_string += a[x] + " ->  " + result.score[x].toFixed(3) + ", "
   }
   //console.log(score_string);
   status(

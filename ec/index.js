@@ -50,7 +50,7 @@ function doPredict(predict) {
   var a = ["r","g","b"];
   var c = [0,0,0];
   for (var x in result.score) {
-    score_string += a[x] + " ->  " + result.score[x].toFixed(3) + ", ";
+    score_string += a[x] + " ->  " + Math.floor(result.score[x].toFixed(3)*255) + ", ";
     c[x] = Math.floor(result.score[x].toFixed(3)*255)
   }
   console.log(c)

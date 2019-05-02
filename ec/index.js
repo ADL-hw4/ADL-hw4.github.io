@@ -47,10 +47,15 @@ function doPredict(predict) {
   const textField = document.getElementById('text-entry');
   const result = predict(textField.value);
   score_string = "Class scores: ";
-  var a = ["r","g","b"]
+  var a = ["r","g","b"];
+  var c = [0,0,0];
   for (var x in result.score) {
-    score_string += a[x] + " ->  " + result.score[x].toFixed(3) + ", "
+    score_string += a[x] + " ->  " + result.score[x].toFixed(3) + ", ";
+    c[x] = Math.floor(result.score[x].toFixed(3)*255)
   }
+  var color_div = document.getElementById('output-color');
+  color_div.style = "background-color:rgb("+toString(r)+","+ toString(g) + "," + toString(b) + ");"
+  console.log(color_div.style)
   //console.log(score_string);
   status(
       score_string + ' elapsed: ' + result.elapsed.toFixed(3) + ' ms)');

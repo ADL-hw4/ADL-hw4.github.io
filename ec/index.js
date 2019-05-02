@@ -53,6 +53,7 @@ function doPredict(predict) {
     score_string += a[x] + " ->  " + result.score[x].toFixed(3) + ", ";
     c[x] = Math.floor(result.score[x].toFixed(3)*255)
   }
+  console.log(c)
   var color_div = document.getElementById('output-color');
   var color = "rgb("+toString(c[0])+","+ toString(c[1]) + "," + toString(c[2]) + ")"
   console.log(color)

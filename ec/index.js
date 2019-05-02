@@ -134,9 +134,14 @@ class Classifier {
     const inputText = text.trim().toLowerCase();
     // Look up word indices.
     const inputBuffer = tf.buffer([1, this.maxLen], 'float32');
+    var zeros = this.maxLen - inputText.length;
+    for(let i=0; i<zeros; ++i) {
+        inputBuffer.set(0, 0, i);
+    }
+    
     for (let i = 0; i < inputText.length; ++i) {
       const word = inputText[i];
-      inputBuffer.set(this.wordIndex[word], 0, i);
+      inputBuffer.set(this.wordIndex[word], 0, i+zeros);
       console.log(word, this.wordIndex[word], inputBuffer);
     }
     const input = inputBuffer.toTensor();

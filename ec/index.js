@@ -54,7 +54,7 @@ function doPredict(predict) {
     c[x] = Math.floor(result.score[x].toFixed(3)*255)
   }
   var color_div = document.getElementById('output-color');
-  color_div.style.backgroundColor = "rgb("+toString(c[0])+","+ toString(c[1]) + "," + toString(c[2]) + ");"
+  color_div.style.backgroundColor = "rgb("+toString(32)+","+ toString(54) + "," + toString(120) + ");"
   console.log(color_div.style)
   //console.log(score_string);
   status(

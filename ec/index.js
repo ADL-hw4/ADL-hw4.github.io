@@ -55,11 +55,11 @@ function doPredict(predict) {
   }
   console.log(c)
   var color_div = document.getElementById('output-color');
-  var color = "rgb("+toString(c[0])+","+ toString(c[1]) + "," + toString(c[2]) + ")"
+  var color = "rgb("+c[0]+","+ c[1] + "," + c[2] + ")"
   console.log(color)
-  console.log("rgb("+toString(32)+","+ toString(54) + "," + toString(120) + ")")
-  color_div.style.backgroundColor = "rgb("+toString(32)+","+ toString(54) + "," + toString(120) + ")"
-  document.body.style.backgroundColor = color
+  //console.log("rgb("+toString(32)+","+ toString(54) + "," + toString(120) + ")")
+  color_div.style.backgroundColor = color;
+  document.body.style.backgroundColor = color;
   console.log(color_div.style)
   //console.log(score_string);
   status(
